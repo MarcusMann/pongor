@@ -11,6 +11,9 @@ func main() {
 	serv.Use(middleware.Logger())
 	serv.Use(middleware.Recover())
 	r := pongor.GetRenderer()
+	// r := pongor.GetRenderer(pongor.PongorOption{
+	// 	Reload: true, // if you want to reload template every request, set Reload to true.
+	// })
 	serv.SetRenderer(r)
 	serv.Static("/static", "./static")
 	serv.Get("/", func(ctx *echo.Context) error {
