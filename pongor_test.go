@@ -5,10 +5,10 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
-	"github.com/macaron-contrib/pongor"
+	"gopkg.in/echo-contrib/pongor.v1"
 	. "github.com/smartystreets/goconvey/convey"
+	"gopkg.in/labstack/echo.v1"
+	"gopkg.in/labstack/echo.v1/middleware"
 )
 
 func TestRenderHtml(t *testing.T) {
