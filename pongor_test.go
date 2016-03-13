@@ -5,17 +5,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gopkg.in/echo-contrib/pongor.v1"
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/labstack/echo.v1"
-	"gopkg.in/labstack/echo.v1/middleware"
 )
 
 func TestRenderHtml(t *testing.T) {
 	Convey("Render HTML", t, func() {
 		e := echo.New()
-		e.Use(middleware.Logger())
-		e.Use(middleware.Recover())
 		r := GetRenderer(PongorOption{
 			Directory: "test",
 		})
@@ -33,8 +29,6 @@ func TestRenderHtml(t *testing.T) {
 
 	Convey("Render HTML with Context", t, func() {
 		e := echo.New()
-		e.Use(middleware.Logger())
-		e.Use(middleware.Recover())
 		r := GetRenderer(PongorOption{
 			Directory: "test",
 		})
@@ -54,7 +48,7 @@ func TestRenderHtml(t *testing.T) {
 }
 
 func ExampleRender() {
-	r := pongor.GetRenderer()
+	r := GetRenderer()
 	e.SetRenderer(r)
 	e.Get("/", func(ctx *echo.Context) error {
 		// render ./templates/index.html file.
