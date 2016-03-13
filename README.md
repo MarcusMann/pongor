@@ -16,4 +16,4 @@ go get -u gopkg.in/echo-contrib/pongor.v1
 
 ## Example
 
-please check [example](https://github.com/echo-contrib/pongor/tree/master/example)
+please check [example](https://github.com/echo-contrib/pongor/blob/v1/example/pongo.go)
