@@ -48,6 +48,7 @@ func TestRenderHtml(t *testing.T) {
 }
 
 func ExampleRender() {
+	e := echo.New()
 	r := GetRenderer()
 	e.SetRenderer(r)
 	e.Get("/", func(ctx *echo.Context) error {
