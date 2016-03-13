@@ -1,6 +1,6 @@
 # pongor
 
-[![Build Status](https://travis-ci.org/echo-contrib/pongor.svg?branch=v1)](https://travis-ci.org/echo-contrib/pongor)
+[![Build Status](https://travis-ci.org/echo-contrib/pongor.svg?branch=v1)](https://travis-ci.org/echo-contrib/pongor)[![Coverage Status](https://coveralls.io/repos/github/echo-contrib/pongor/badge.svg?branch=v1)](https://coveralls.io/github/echo-contrib/pongor?branch=v1)
 
 Package pongor is a middleware that provides pongo2 template engine support for __echo.v1__. 
 
