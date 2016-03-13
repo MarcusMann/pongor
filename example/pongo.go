@@ -1,15 +1,12 @@
 package main
 
 import (
-	"github.com/echo-contrib/pongor"
-	"github.com/labstack/echo"
-	"github.com/labstack/echo/middleware"
+	"gopkg.in/echo-contrib/pongor.v1"
+	"gopkg.in/labstack/echo.v1"
 )
 
 func main() {
 	serv := echo.New()
-	serv.Use(middleware.Logger())
-	serv.Use(middleware.Recover())
 	r := pongor.GetRenderer()
 	// r := pongor.GetRenderer(pongor.PongorOption{
 	// 	Reload: true, // if you want to reload template every request, set Reload to true.
