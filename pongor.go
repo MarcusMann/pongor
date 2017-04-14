@@ -65,6 +65,10 @@ func getContext(templateData interface{}) pongo2.Context {
 	if isMap {
 		return contextData
 	}
+    contextData, isEchoMap := templateData.(echo.Map)
+    if isEchoMap {
+        return contextData
+    }
 	return nil
 }
 
