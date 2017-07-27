@@ -1,10 +1,3 @@
-package main
-
-import (
-	"github.com/echo-contrib/pongor"
-	"github.com/labstack/echo"
-)
-
 func main() {
 	serv := echo.New()
 	r := pongor.GetRenderer()
@@ -23,4 +16,8 @@ func main() {
 	}())
 
 	serv.Start(":3000")
+}
+
+func contato(c echo.Context) error {
+	return c.Render(200, "index.html", nil)
 }
